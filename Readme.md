@@ -1,26 +1,40 @@
-### Padrões de Projetos Orientados a Objetos
+# Lista de Exercícios de Padrões de Projetos
 
-#### Lista de Exercícios Avaliativa I
+## Descrição
 
-- Atividade individual.
-    
-    ● Você deverá criar um repositório no GitHub para onde submeterá suas
-respostas;
+Este repositório contém uma série de subprojetos que demonstram a implementação de diferentes padrões de design em um contexto de Engenharia de Software. Cada subprojeto aborda um padrão específico, fornecendo exemplos práticos de uso e implementação.
 
-    ● A entrega da atividade será o link com a lista de commits do seu repositório;
+Os padrões de design abordados neste repositório incluem:
 
-    ● A apresentação será arguição sobre o seu código;
+- Strategy
+- Observer
+- Decorator
+- Factory
+- Composite
 
-    ● Para as três primeiras questões abaixo, vocês vão usar o código inicial do
-arquivo src.zip;
+Cada subprojeto contém um `README.md` detalhado com informações sobre a implementação, exemplo de uso e instruções de execução.
 
-    ● Qualquer indício de fraude acarretará nota zero em toda a lista.
+## Execução dos Subprojetos
 
-#
+Para executar um subprojeto específico, navegue até a pasta correspondente e siga as instruções no `README.md` do subprojeto.
 
-Lista de Exercício
+Exemplo:
+```cmd
 
+- Acessar Projeto 
+    cd nomeDoProjeto
+    cd src
 
-5. Carro
+-Executa Projeto
+    javac Main.java
+    java Main.java
+```
+## Contribuições
+
+Contribuições para este repositório são bem-vindas. Sinta-se à vontade para abrir uma issue ou um pull request para discutir e implementar melhorias em qualquer um dos subprojetos.
+
+## Licença
+Este projeto e todos os subprojetos contidos neste repositório, são resoluções de atividades da disciplina de Padrões de Projeto.
+
 
     
