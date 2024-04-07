@@ -1,0 +1,7 @@
+INDEX VERSION 1.134+C:\Users\erimi\WorkSpace\Eclipse\lista_PJS\.metadata\.plugins\org.eclipse.jdt.core
+2812353409.index
+4137555308.index
+1936777299.index
+1422139998.index
+1865797976.index
+1380817135.index
