@@ -14,6 +14,14 @@ O padrão Factory Method é utilizado para criar objetos representando diferente
 
 Independentemente da localização, os inimigos sempre atacarão o jogador que estiver passando por aquela região.
 
+### Arquitetura do Projeto - Domain-Driven-Design (DDD)
+
+- **Domínio:** Essa camada, defini as entidades-chave do nosso jogo, como 'Inimigo' e 'Localização', juntamente com as regras de negócio. 
+
+- **Aplicação:** Essa camada, é responsável pela lógica de alto nível do jogo, essa camada utliza as fábricas de domínio para criar os inimigos baseados na localização atual do jogador.
+
+- **Infraestrutura:** A camada de aplicação e domínio, lidar com as questões técnicas como inicialização do jogo e interações externas. Tendo como ponto de entrada do Jogo ('Main.java')
+
 ### Estrutura do Projeto
 
 - **EnemyFactory:** Uma interface para a fábrica de inimigos.
