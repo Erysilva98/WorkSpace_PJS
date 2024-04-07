@@ -26,8 +26,7 @@ Exemplo:
     cd src
 
 -Executa Projeto
-    javac Main.java
-    java Main.java
+    javac Main.java && Java Main.java
 ```
 ## Contribuições
 

@@ -19,6 +19,11 @@ O padrão Composite é utilizado para representar a estrutura hierárquica do ca
 
 O programa calcula o peso total de um carro somando o peso de todas as suas partes. Durante o cálculo, o programa imprime na tela o peso de cada parte sendo somado e o total parcial acumulado.
 
+
+### Estrutura do Projeto
+
+- **componente** - Contém classes que compõe os componentes do carro 
+
 ### Exemplo de Saída do Programa
 
 ```

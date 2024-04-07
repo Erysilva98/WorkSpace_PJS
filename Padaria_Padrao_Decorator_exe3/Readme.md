@@ -2,7 +2,7 @@
 
 ## Padaria
 
-Este projeto é uma implementação do padrão de projeto Decorator aplicado a uma padaria simulada. O pacote `bakery` contém código parcial para uma padaria que faz dois tipos de bolos: baunilha e chocolate. O objetivo é permitir que a padaria crie bolos mais complexos, como um "bolo de baunilha em várias camadas com granulado que diz 'Olá, mundo!'" usando o padrão Decorator.
+Este projeto é uma implementação do padrão de projeto Decorator aplicado a uma padaria simulada. Uma padaria que faz dois tipos de bolos: baunilha e chocolate. O objetivo é permitir que a padaria crie bolos mais complexos, como um "bolo de baunilha em várias camadas com granulado que diz 'Olá, mundo!'" usando o padrão Decorator.
 
 ### Implementação do Padrão Decorator
 
@@ -14,6 +14,11 @@ O código utiliza o padrão Decorator da seguinte forma:
   - Para um bolo com o dizer X, não adiciona-se nada ao custo e imprime-se "with saying 'X''" no final do nome.
 
 - **Novo Tipo de Bolo:** Acrescenta-se um novo tipo de bolo: bolo de morango, que custa o dobro de um bolo padrão.
+
+### Estrutura do Projeto
+
+- **padaria/bolos** - Contém os Tipos de Bolos disponível na Padaria
+- **padaria/decoradores** - Contém os Tipos de Decorador para os bolos
 
 ### Exemplo de Uso
 
