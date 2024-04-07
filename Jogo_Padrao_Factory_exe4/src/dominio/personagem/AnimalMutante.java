@@ -6,7 +6,7 @@ public class AnimalMutante implements InimigoPersonagem {
 
     @Override
     public void atacar(Jogador jogador) {
-        int danoAnimalMutante = 15;
+        int danoAnimalMutante = 5;
         
         jogador.receberDano(danoAnimalMutante); 
         System.out.println("Animal Mutante atacou o jogador e causou " + danoAnimalMutante + "% de dano!");

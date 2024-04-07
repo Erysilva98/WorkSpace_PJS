@@ -24,10 +24,12 @@ Independentemente da localização, os inimigos sempre atacarão o jogador que e
 
 ### Estrutura do Projeto
 
-- **EnemyFactory:** Uma interface para a fábrica de inimigos.
-- **AmazonEnemyFactory, SertaoEnemyFactory:** Classes concretas que implementam a interface EnemyFactory para criar inimigos específicos para a Amazônia e o Sertão, respectivamente.
-- **Enemy:** Uma interface para os inimigos.
-- **MutantAnimal, Cangaceiro:** Classes concretas que implementam a interface Enemy para representar os diferentes tipos de inimigos.
+- **Jogo:** Classe com toda a lógica do Jogo
+- **Jogador:** Classe Jogador com os atributos do Jogador
+- **InimigoFabrica:** Uma interface para a fábrica de inimigos.
+- **AmazonInimigoFabrica, SertaoInimigoFabrica:** Classes concretas que implementam a interface **InimigoFabrica:** Uma interface para a fábrica de inimigos criar inimigos específicos para a Amazônia e o Sertão, respectivamente.
+- **InimigoPersonagem:** Uma interface para os inimigos.
+- **AnimalMutante, Cangaceiro:** Classes concretas que implementam a interface Enemy para representar os diferentes tipos de inimigos.
 
 ### Exemplo de Uso
 
