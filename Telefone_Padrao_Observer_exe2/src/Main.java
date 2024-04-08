@@ -8,13 +8,13 @@ public class Main {
 
     public static void main(String[] args) {
 
-        final int NUM_DIGITOS = 12;
+        final int NUM_DIGITOS = 11;
 
         TelefoneModel telefoneModel = new TelefoneModel();
         TelaView telaView = new TelaView();
 
         telefoneModel.adicionarObservador(new NumeroRecenteObservador(telaView));
-        telefoneModel.adicionarObservador(new DiscagemObservador(telaView, telefoneModel)); 
+        telefoneModel.adicionarObservador(new DiscagemObservador(telaView, telefoneModel, NUM_DIGITOS)); 
 
         Teclado teclado = new Teclado(telefoneModel);
         teclado.simularPressionarTecla(NUM_DIGITOS);
