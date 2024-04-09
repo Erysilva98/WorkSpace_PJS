@@ -35,7 +35,7 @@ Independentemente da localização, os inimigos sempre atacarão o jogador que e
 - **Métodos**:
     - `void iniciarJogo()`: Inicia o loop do jogo, movendo o jogador entre regiões e enfrentando inimigos até que o jogador perca todos os pontos de vida.
 
-- `Jogador.java`: 
+- `Jogador.java` 
 
 - **Tipo**: Classe
 - **Descrição**: Representa o jogador dentro do jogo, contendo informações essenciais como pontos de vida (HP).

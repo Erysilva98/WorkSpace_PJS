@@ -15,10 +15,88 @@ O código utiliza o padrão Decorator da seguinte forma:
 
 - **Novo Tipo de Bolo:** Acrescenta-se um novo tipo de bolo: bolo de morango, que custa o dobro de um bolo padrão.
 
-### Estrutura do Projeto
+# Estrutura do Projeto
 
-- **padaria/bolos** - Contém os Tipos de Bolos disponível na Padaria
-- **padaria/decoradores** - Contém os Tipos de Decorador para os bolos
+- `Main.java`: Classe principal que inicia o pedido de bolos.
+
+- **Tipo**: Classe
+- **Descrição**: Orquestra a criação de bolos com diversos decoradores e imprime os detalhes do pedido.
+- **Métodos**:
+  - `main(String[] args)`: Método de entrada do programa.
+
+- Pacote `padaria.bolos`
+
+- `Bolo.java`
+
+- **Tipo**: Classe Abstrata
+- **Descrição**: Define a estrutura base de um bolo, incluindo seu custo e descrição.
+- **Métodos**:
+  - `getCustoBolo()`: Retorna o custo base do bolo.
+  - `getDescricao()`: Método abstrato para obter a descrição do bolo.
+
+- `BoloBaunilha.java`
+
+- **Tipo**: Classe
+- **Descrição**: Representa um bolo de baunilha.
+- **Métodos**:
+  - `getDescricao()`: Retorna a descrição do bolo de baunilha.
+
+- `BoloChocolate.java`
+
+- **Tipo**: Classe
+- **Descrição**: Representa um bolo de chocolate.
+- **Métodos**:
+  - `getDescricao()`: Retorna a descrição do bolo de chocolate.
+
+- `BoloMorango.java`
+
+- **Tipo**: Classe
+- **Descrição**: Representa um bolo de morango, com custo diferenciado.
+- **Métodos**:
+  - `getCustoBolo()`: Retorna o custo do bolo de morango, que é o dobro do preço base.
+  - `getDescricao()`: Retorna a descrição do bolo de morango.
+
+- `Pedido.java`
+
+- **Tipo**: Classe
+- **Descrição**: Gerencia um pedido contendo uma lista de bolos.
+- **Métodos**:
+  - `adicionarBolo(Bolo bolo)`: Adiciona um bolo ao pedido.
+  - `imprimirPedido()`: Imprime os detalhes de todos os bolos no pedido.
+
+- Pacote `padaria.decoradores`
+
+- `DecoradorBolo.java`
+
+- **Tipo**: Classe Abstrata
+- **Descrição**: Base para decoradores de bolo, extendendo a classe Bolo para adicionar funcionalidades.
+- **Métodos**:
+  - `getDescricao()`: Retorna a descrição do bolo decorado.
+  - `getCustoBolo()`: Retorna o custo do bolo decorado.
+
+- `DecoradorBoloFrase.java`
+
+- **Tipo**: Classe
+- **Descrição**: Adiciona uma frase à descrição do bolo.
+- **Métodos**:
+  - `getDescricao()`: Retorna a descrição do bolo com uma frase adicionada.
+
+- `DecoradorGranulado.java`
+
+- **Tipo**: Classe
+- **Descrição**: Adiciona granulado ao bolo, aumentando seu custo.
+- **Métodos**:
+  - `getCustoBolo()`: Retorna o custo do bolo com granulado adicionado.
+  - `getDescricao()`: Retorna a descrição do bolo com granulado.
+
+- `DecoradorMultiCamadas.java`
+
+- **Tipo**: Classe
+- **Descrição**: Adiciona múltiplas camadas ao bolo, aumentando seu custo.
+- **Métodos**:
+  - `getCustoBolo()`: Retorna o custo do bolo com múltiplas camadas adicionadas.
+  - `getDescricao()`: Retorna a descrição do bolo multi-camadas.
+
 
 ### Exemplo de Uso
 
