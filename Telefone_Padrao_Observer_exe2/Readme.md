@@ -12,6 +12,13 @@ O código utiliza o padrão Observer da seguinte forma:
 
 - **Notificação de Observadores:** Os observadores são notificados a cada dígito inserido, permitindo que realizem ações específicas.
 
+### Estrutura do Projeto
+
+- **telefone.Model** - 
+- **telefone.Observer** -
+- **telefone.Teclado** -
+- **telefone.View** -
+
 ### Exemplo de Uso
 
 A UI (classe `Screen`) cria dois observadores:
