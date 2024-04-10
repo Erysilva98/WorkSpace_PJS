@@ -3,24 +3,23 @@ package componente;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CompositeParteCarro implements Componente {
+public class ComponenteParteCarro implements IComponente {
     private List<Componente> componentes = new ArrayList<>();
     private String nome;
     private double pesoBase;
 
-    public CompositeParteCarro(String nome, double pesoBase) {
+    public ComponenteParteCarro(String nome, double pesoBase) {
         this.nome = nome;
         this.pesoBase = pesoBase;
     }
 
     @Override
     public double getPeso() {
-        double totalPeso = pesoBase;
-        for (Componente comp : componentes) {
-            totalPeso += comp.getPeso();
-        }
-        System.out.println("\n Total parcial para " + nome + ": " + totalPeso + "kg \n");
-        return totalPeso;
+        // Calcula o peso total dos componentes internos
+        double pesoComponentes = componentes.stream().mapToDouble(Componente::getPeso).sum();
+        // Imprime o peso parcial antes de retornar o total
+        System.out.println("\n Peso parcial para " + nome + ": " + (pesoBase + pesoComponentes) + "kg");
+        return pesoBase + pesoComponentes;
     }
 
     @Override

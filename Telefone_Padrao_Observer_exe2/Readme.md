@@ -12,12 +12,61 @@ O código utiliza o padrão Observer da seguinte forma:
 
 - **Notificação de Observadores:** Os observadores são notificados a cada dígito inserido, permitindo que realizem ações específicas.
 
-### Estrutura do Projeto
+# Estrutura do Projeto Telefone
 
-- **telefone.Model** - 
-- **telefone.Observer** -
-- **telefone.Teclado** -
-- **telefone.View** -
+Este documento descreve a estrutura e os componentes do projeto de simulação de telefone.
+
+- `Main.java`
+  - **Tipo**: Classe
+  - **Descrição**: Inicia a simulação de um teclado de telefone e a interação com o modelo de telefone.
+  - **Métodos**:
+    - `main(String[] args)`: Método de entrada do programa que configura a simulação.
+
+- Pacote `telefone.model`
+
+- `TelefoneModel.java`
+  - **Tipo**: Classe
+  - **Descrição**: Mantém o estado do telefone e notifica os observadores sobre a digitação de números.
+  - **Métodos**:
+    - `digitarNumero(int novoNumero)`: Registra um número discado.
+    - `adicionarObservador(Observador observador)`: Adiciona um observador ao telefone.
+    - `getNumerosDiscados()`: Retorna a lista de números discados.
+
+- Pacote `telefone.observador`
+
+- `Observador.java`
+  - **Tipo**: Interface
+  - **Descrição**: Define um observador que reage a mudanças no estado do telefone.
+  - **Métodos**:
+    - `atualizar(int numeroDiscado)`: Invocado quando um número é discado.
+
+- `DiscagemObservador.java`
+  - **Tipo**: Classe
+  - **Descrição**: Observador que exibe o número completo quando a sequência de discagem é finalizada.
+  - **Métodos**:
+    - `atualizar(int numeroDiscado)`: Implementação específica para discagem completa.
+
+- `NumeroRecenteObservador.java`
+  - **Tipo**: Classe
+  - **Descrição**: Observador que exibe o número mais recentemente discado.
+  - **Métodos**:
+    - `atualizar(int numeroDiscado)`: Implementação específica para exibição do número recente.
+
+- Pacote `telefone.teclado`
+
+- `Teclado.java`
+  - **Tipo**: Classe
+  - **Descrição**: Simula um teclado de telefone que dispara a digitação de números.
+  - **Métodos**:
+    - `simularPressionarTecla(int numeroPressionado)`: Simula o ato de pressionar uma tecla várias vezes.
+
+- Pacote `telefone.view`
+
+- `TelaView.java`
+  - **Tipo**: Classe
+  - **Descrição**: Representa a tela onde os números discados são exibidos.
+  - **Métodos**:
+    - `exibirNumeroDiscado(String numeroDiscado)`: Exibe o número discado na tela.
 
 ### Exemplo de Uso
 
