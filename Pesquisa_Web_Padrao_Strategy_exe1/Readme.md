@@ -14,6 +14,61 @@ O código já utiliza objetos "observadores" para notificar o `Snooper` de cada 
 
 - **Notificação de Observadores:** Modifica-se o modelo de busca para verificar, para cada consulta, se um observador está interessado na consulta antes de notificá-lo.
 
+# Estrutura do Projeto de Pesquisa Web
+
+Este documento descreve a estrutura e os componentes do projeto de pesquisa na web que filtra e observa o texto de "Hamlet".
+
+- Classe Principal
+
+- `Main.java`
+  - **Tipo**: Classe
+  - **Descrição**: Configura e inicia a simulação da pesquisa na web utilizando o texto de "Hamlet".
+  - **Métodos**:
+    - `main(String[] args)`: Método de entrada do programa que configura os observadores e inicia a simulação de pesquisa.
+
+- Pacote `pesquisaWeb.model`
+
+- `PesquisaWebModelo.java`
+  - **Tipo**: Classe
+  - **Descrição**: Mantém o estado da pesquisa web e notifica os observadores sobre cada linha do texto processada.
+  - **Métodos**:
+    - `adicionarObservadorConsulta(ConsultaObservador consultaObservador)`: Adiciona um observador à pesquisa.
+    - `simularPesquisa()`: Simula uma pesquisa lendo o texto e notificando observadores.
+
+- Pacote `pesquisaWeb.filtro`
+
+- `ConsultaFiltro.java`
+  - **Tipo**: Interface
+  - **Descrição**: Define um filtro que pode ser aplicado a uma string de consulta.
+  - **Métodos**:
+    - `filtrar(String consulta)`: Determina se a string de consulta atende a um critério de filtro.
+
+- `ContemAmigoFiltro.java`
+  - **Tipo**: Classe
+  - **Descrição**: Filtro que verifica se a consulta contém a palavra "friend".
+  - **Métodos**:
+    - `filtrar(String consulta)`: Retorna `true` se a consulta contém a palavra "friend".
+
+- `MaiorQue60Filtro.java`
+  - **Tipo**: Classe
+  - **Descrição**: Filtro que verifica se a consulta possui mais de 60 caracteres.
+  - **Métodos**:
+    - `filtrar(String consulta)`: Retorna `true` se a consulta tem mais de 60 caracteres.
+
+- Pacote `pesquisaWeb.observador`
+
+- `ConsultaObservador.java`
+  - **Tipo**: Interface
+  - **Descrição**: Define um observador que reage às consultas de pesquisa.
+  - **Métodos**:
+    - `aoReceberConsulta(String consulta)`: Invocado quando uma nova consulta é recebida.
+
+- `BisbilhoteiroObservador.java`
+  - **Tipo**: Classe
+  - **Descrição**: Observador que imprime uma mensagem quando uma consulta passa pelo filtro.
+  - **Métodos**:
+    - `BisbilhoteiroObservador(PesquisaWebModelo, ConsultaFiltro, String)`: Construtor que adiciona o observador ao modelo de pesquisa.
+
 ### Exemplo de Uso
 
 No cliente (`Snooper.java`), cria-se dois observadores de consulta:
