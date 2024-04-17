@@ -1,4 +1,4 @@
-package pesquisaWeb.model;
+package pesquisaWeb.web;
 
 import pesquisaWeb.observador.ConsultaObservador;
 
@@ -7,12 +7,12 @@ import java.util.List;
 import java.util.ArrayList;
 
 
-public class PesquisaWebModelo {
+public class PesquisaWeb {
 
     private final File arquivoFonte;
     private final List<ConsultaObservador> observadores = new ArrayList<>();
 
-    public PesquisaWebModelo(File arquivoFonte){
+    public PesquisaWeb(File arquivoFonte){
         this.arquivoFonte = arquivoFonte;
     }
 

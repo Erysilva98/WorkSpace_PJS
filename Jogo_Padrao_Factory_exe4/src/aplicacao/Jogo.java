@@ -24,6 +24,8 @@ public class Jogo {
             String localizacaoJogadorAtual = regioesPersonagemInimigo[moveJogador];
 
             System.out.println("\n Jogador se mover para região: " + localizacaoJogadorAtual);
+
+            // Método para criar inimigos de acordo com a região do jogador
             InimigoFabrica fabrica = getFabricarInimigo(localizacaoJogadorAtual);
             InimigoPersonagem inimigo = fabrica.criarInimigo();
             inimigo.atacar(jogador);

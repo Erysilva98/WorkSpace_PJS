@@ -2,16 +2,16 @@ package telefone.observador;
 
 import java.util.stream.Collectors;
 
-import telefone.model.TelefoneModel;
+import telefone.phone.NumeroTelefone;
 import telefone.view.TelaView;
 
 public class DiscagemObservador implements Observador{
 
     private TelaView telaView;
-    private TelefoneModel telefoneModel;
+    private NumeroTelefone telefoneModel;
     private final int numeroCompleto;
 
-    public DiscagemObservador(TelaView telaView, TelefoneModel telefoneModel, int numeroCompleto) {
+    public DiscagemObservador(TelaView telaView, NumeroTelefone telefoneModel, int numeroCompleto) {
         this.telaView = telaView;
         this.telefoneModel = telefoneModel;
         this.numeroCompleto = numeroCompleto;

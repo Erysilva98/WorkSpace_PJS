@@ -1,11 +1,11 @@
-package telefone.model;
+package telefone.phone;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import telefone.observador.Observador;
 
-public class TelefoneModel {
+public class NumeroTelefone {
 
     private List<Integer> numerosDiscados = new ArrayList<>();
     private List<Observador> observadores = new ArrayList<>();

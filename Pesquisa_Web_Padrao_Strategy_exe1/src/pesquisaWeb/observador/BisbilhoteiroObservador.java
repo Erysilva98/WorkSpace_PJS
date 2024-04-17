@@ -1,11 +1,11 @@
 package pesquisaWeb.observador;
 
 import pesquisaWeb.filtro.ConsultaFiltro;
-import pesquisaWeb.model.PesquisaWebModelo;
+import pesquisaWeb.web.PesquisaWeb;
 
 public class BisbilhoteiroObservador {
 
-    public BisbilhoteiroObservador(PesquisaWebModelo modeloPesquisa, ConsultaFiltro filtroConsulta, String mensagem) {
+    public BisbilhoteiroObservador(PesquisaWeb modeloPesquisa, ConsultaFiltro filtroConsulta, String mensagem) {
         modeloPesquisa.adicionarObservadorConsulta(consulta -> {
             if (filtroConsulta.filtrar(consulta)) {
                 System.out.println(mensagem + consulta);
