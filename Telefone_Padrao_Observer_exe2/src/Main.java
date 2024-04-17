@@ -1,5 +1,5 @@
-import telefone.model.TelefoneModel;
 import telefone.observador.NumeroRecenteObservador;
+import telefone.phone.NumeroTelefone;
 import telefone.observador.DiscagemObservador;
 import telefone.teclado.Teclado;
 import telefone.view.TelaView;
@@ -10,13 +10,13 @@ public class Main {
 
         final int NUM_DIGITOS = 11;
 
-        TelefoneModel telefoneModel = new TelefoneModel();
+        NumeroTelefone discarNumeroTelefone = new NumeroTelefone();
         TelaView telaView = new TelaView();
 
-        telefoneModel.adicionarObservador(new NumeroRecenteObservador(telaView));
-        telefoneModel.adicionarObservador(new DiscagemObservador(telaView, telefoneModel, NUM_DIGITOS)); 
+        discarNumeroTelefone.adicionarObservador(new NumeroRecenteObservador(telaView));
+        discarNumeroTelefone.adicionarObservador(new DiscagemObservador(telaView, discarNumeroTelefone, NUM_DIGITOS)); 
 
-        Teclado teclado = new Teclado(telefoneModel);
+        Teclado teclado = new Teclado(discarNumeroTelefone);
         teclado.simularPressionarTecla(NUM_DIGITOS);
     }
 }

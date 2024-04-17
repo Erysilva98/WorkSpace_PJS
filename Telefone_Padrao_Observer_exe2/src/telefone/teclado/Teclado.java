@@ -1,14 +1,15 @@
 package telefone.teclado;
 
-import telefone.model.TelefoneModel;
 import java.util.Random;
+
+import telefone.phone.NumeroTelefone;
 
 public class Teclado {
 
-    private final TelefoneModel telefoneModel;
+    private final NumeroTelefone discarNumeroTelefone;
 
-    public Teclado(TelefoneModel telefoneModel) {
-        this.telefoneModel = telefoneModel;
+    public Teclado(NumeroTelefone discarNumeroTelefone) {
+        this.discarNumeroTelefone = discarNumeroTelefone;
     }
 
     public void simularPressionarTecla(int numeroPressionado) {
@@ -20,7 +21,7 @@ public class Teclado {
             int novoNumero = random.nextInt(MAX_DIGITO + 1);
             
             System.out.println("Pressionando tecla: " + novoNumero);
-            telefoneModel.digitarNumero(novoNumero);
+            discarNumeroTelefone.digitarNumero(novoNumero);
         }
         
     }
